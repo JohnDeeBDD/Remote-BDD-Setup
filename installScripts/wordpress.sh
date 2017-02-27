@@ -22,3 +22,12 @@ sudo apt-get -y install php-zip
 sudo apt-get -y install lamp-server^
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 sudo a2enmod rewrite
+sudo chmod -R 777 /var/www
+cd /var/www/html/wp-content/plugins
+sudo chown -R ubuntu:www-data /var/www/html
+sudo find /var/www/html -type d -exec chmod g+s {} \;
+sudo chmod g+w /var/www/html/wp-content
+sudo chmod -R g+w /var/www/html/wp-content/plugins
+sudo chmod -R g+w /var/www/html/wp-content/themes
+sudo rm -fr akismet
+sudo rm hello.php
