@@ -42,6 +42,7 @@ sudo chmod -R g+w /var/www/html/wp-content/themes
 cd /var/www/html/wp-content/plugins
 sudo rm -fr akismet
 sudo rm hello.php
+sudo apt-get clean
 sudo git clone https://github.com/Hitman007/Wordpress-Pickles.git
 sudo git clone https://Hitman007@bitbucket.org/Hitman007/crg_mods.git
 mysql -u root -ppassword << EOF
