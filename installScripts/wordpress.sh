@@ -24,10 +24,11 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 sudo a2enmod rewrite
 sudo chmod -R 777 /var/www
 cd /var/www/html
-wget http://wordpress.org/latest.tar.gz
+sudo wget http://wordpress.org/latest.tar.gz
 tar xfz latest.tar.gz
-mv -v /var/www/html/wordpress/* /var/www/html/
-rm -fr /var/www/html/wordpress
+sudo mv -v /var/www/html/wordpress/* /var/www/html/
+sudo rm -fr /var/www/html/wordpress
+sudo rm /var/www/html/index.html
 sudo chown -R ubuntu:www-data /var/www/html
 sudo find /var/www/html -type d -exec chmod g+s {} \;
 sudo chmod g+w /var/www/html/wp-content
