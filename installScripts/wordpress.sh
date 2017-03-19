@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# source <(curl -s https://raw.githubusercontent.com/Hitman007/Remote-BDD-Setup/master/installScripts/wordpress.sh)
+#
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo chmod -R 777 /var/www
