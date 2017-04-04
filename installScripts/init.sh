@@ -27,4 +27,3 @@ sudo apt-get -y install php-zip
 sudo apt-get -y install lamp-server^
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 sudo a2enmod rewrite
-vncserver
