@@ -10,6 +10,7 @@ tar xfz latest.tar.gz
 sudo mv -v /var/www/html/wordpress/* /var/www/html/
 sudo rm -fr /var/www/html/wordpress
 sudo rm /var/www/html/index.html
+sudo rm /var/www/html/latest.tar.gz
 sudo chown -R ubuntu:www-data /var/www/html
 sudo find /var/www/html -type d -exec chmod g+s {} \;
 sudo chmod g+w /var/www/html/wp-content
