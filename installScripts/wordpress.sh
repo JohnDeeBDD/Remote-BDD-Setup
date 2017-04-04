@@ -72,4 +72,7 @@ EOF
 #cd /etc/apache2
 #sudo rm apache2.conf
 #sudo curl -o apache2.conf https://raw.githubusercontent.com/Hitman007/Remote-BDD-Setup/master/installScripts/apache2.conf
+sudo echo "<Directory /var/www/html/>" >> /etc/apache2/apache2.conf
+sudo echo "AllowOverride All" >> /etc/apache2/apache2.conf
+sudo echo "</Directory>" >> /etc/apache2/apache2.conf
 sudo reboot
