@@ -33,7 +33,7 @@ CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
 FLUSH PRIVILEGES;
 EOF
-cd /etc/apache2
-sudo rm apache2.conf
-sudo curl -o apache2.conf https://raw.githubusercontent.com/Hitman007/Remote-BDD-Setup/master/installScripts/apache2.conf
+#cd /etc/apache2
+#sudo rm apache2.conf
+#sudo curl -o apache2.conf https://raw.githubusercontent.com/Hitman007/Remote-BDD-Setup/master/installScripts/apache2.conf
 sudo reboot
