@@ -69,4 +69,10 @@ CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
 FLUSH PRIVILEGES;
 EOF
+
+#install Wordpress CLI
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+
 sudo reboot
