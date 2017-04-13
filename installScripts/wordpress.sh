@@ -8,7 +8,7 @@ sudo apt-get -y upgrade
 sudo chmod -R 777 /var/www
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
-sudo apt-get -f install
+#sudo apt-get -f install
 sudo apt-get -y install nodejs-legacy
 sudo apt-get -y install xfce4
 sudo apt-get -y install vnc4server
@@ -28,18 +28,14 @@ sudo apt-get -y install npm
 sudo apt-get -y install zip
 sudo apt-get -y install unzip
 sudo apt-get -y install php-zip
-sudo apt-get -y install lamp-server^
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
+sudo apt-get -y install mysql-server
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
 sudo a2enmod rewrite
 
-# Install ChromeDriver.
-wget -N http://chromedriver.storage.googleapis.com/2.27/chromedriver_linux64.zip -P ~/
-unzip ~/chromedriver_linux64.zip -d ~/
-rm ~/chromedriver_linux64.zip
-sudo mv -f ~/chromedriver /usr/local/share/
-sudo chmod +x /usr/local/share/chromedriver
-sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-
+# Install Wordpress:
 sudo chmod -R 777 /var/www
 cd /var/www/html
 sudo wget http://wordpress.org/latest.tar.gz
@@ -58,12 +54,7 @@ sudo find /var/www/html -type d -exec chmod g+s {} \;
 sudo chmod g+w /var/www/html/wp-content
 sudo chmod -R g+w /var/www/html/wp-content/plugins
 sudo chmod -R g+w /var/www/html/wp-content/themes
-cd /var/www/html/wp-content/plugins
-sudo rm -fr akismet
-sudo rm hello.php
-sudo apt-get clean
-sudo git clone https://github.com/Hitman007/Wordpress-Pickles.git
-sudo git clone https://Hitman007@bitbucket.org/Hitman007/crg_mods.git
+
 mysql -u root -ppassword << EOF
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
@@ -71,10 +62,25 @@ GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password'
 FLUSH PRIVILEGES;
 EOF
 
+# Wordpress plugins:
+cd /var/www/html/wp-content/plugins
+sudo rm -fr akismet
+sudo rm hello.php
+sudo git clone https://github.com/Hitman007/Wordpress-Pickles.git
+sudo git clone https://Hitman007@bitbucket.org/Hitman007/crg_mods.git
+
 #install Wordpress CLI
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
+
+# Install ChromeDriver.
+wget -N http://chromedriver.storage.googleapis.com/2.27/chromedriver_linux64.zip -P ~/
+unzip ~/chromedriver_linux64.zip -d ~/
+rm ~/chromedriver_linux64.zip
+sudo mv -f ~/chromedriver /usr/local/share/
+sudo chmod +x /usr/local/share/chromedriver
+sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 
 #install phantomJS
 sudo apt-get -y install build-essential chrpath libssl-dev libxft-dev
@@ -83,4 +89,5 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #to run phantomjs:
 # ./phantomjs --webdriver=4444
 
+sudo apt-get clean
 sudo reboot
