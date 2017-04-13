@@ -8,7 +8,7 @@ sudo apt-get -y upgrade
 sudo chmod -R 777 /var/www
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
-#sudo apt-get -f install
+sudo apt-get -f install
 sudo apt-get -y install nodejs-legacy
 sudo apt-get -y install xfce4
 sudo apt-get -y install vnc4server
