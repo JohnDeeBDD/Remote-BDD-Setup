@@ -69,6 +69,8 @@ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.pha
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
 
+sudo chmod -R 777 /var/www
+
 # Install ChromeDriver.
 wget -N http://chromedriver.storage.googleapis.com/2.27/chromedriver_linux64.zip -P ~/
 unzip ~/chromedriver_linux64.zip -d ~/
