@@ -2,6 +2,7 @@
 #
 # source <(curl -s https://raw.githubusercontent.com/Hitman007/Remote-BDD-Setup/master/installScripts/wordpress.sh)
 # Directions: http://customrayguns.com/wp-bdd-software/
+# Install.sh: https://gist.github.com/ziadoz/3e8ab7e944d02fe872c3454d17af31a5
 # DeMomentSomTres Export
 #
 sudo apt-get -y update
