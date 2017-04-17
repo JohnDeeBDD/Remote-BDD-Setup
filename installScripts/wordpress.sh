@@ -57,6 +57,11 @@ GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password'
 FLUSH PRIVILEGES;
 EOF
 
+#install Wordpress CLI
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+
 # Wordpress plugins:
 cd /var/www/html/wp-content/plugins
 sudo rm -fr akismet
@@ -64,11 +69,7 @@ sudo rm hello.php
 sudo git clone https://github.com/Hitman007/Wordpress-Pickles.git
 sudo git clone https://Hitman007@bitbucket.org/Hitman007/crg_mods.git
 sudo git clone https://github.com/Hitman007/NevadaCat.git
-
-#install Wordpress CLI
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-chmod +x wp-cli.phar
-sudo mv wp-cli.phar /usr/local/bin/wp
+sudo wp plugin install woocommerce
 
 sudo chmod -R 777 /var/www
 
