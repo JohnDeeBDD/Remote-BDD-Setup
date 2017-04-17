@@ -85,6 +85,7 @@ sudo apt-get -y install build-essential chrpath libssl-dev libxft-dev
 sudo apt-get -y install libfreetype6 libfreetype6-dev
 sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #to run phantomjs:
+# cd /var/www/html/wp-content/plugins/NevadaCat/vendor/phantomjs
 # ./phantomjs --webdriver=4444
 
 sudo apt-get clean
