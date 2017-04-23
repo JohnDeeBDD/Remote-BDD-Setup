@@ -18,6 +18,7 @@ sudo apt-get -y install php php-curl php-gd php-mbstring php-mcrypt php-xml php-
 sudo apt-get -y install firefox
 sudo apt-get -y install default-jdk
 sudo apt-get -y install libxss1 libappindicator1 libindicator7
+sudo apt-get -y install openjdk-8-jre-headless xvfb libxi6 libgconf-2-4
 sudo apt-get -y install npm
 sudo apt-get -y install zip
 sudo apt-get -y install unzip
@@ -89,5 +90,20 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 # cd /var/www/html/wp-content/plugins/NevadaCat/vendor/phantomjs
 # ./phantomjs --webdriver=4444
 
+# Install ChromeDriver.
+wget -N http://chromedriver.storage.googleapis.com/2.27/chromedriver_linux64.zip -P ~/
+unzip ~/chromedriver_linux64.zip -d ~/
+rm ~/chromedriver_linux64.zip
+sudo mv -f ~/chromedriver /usr/local/share/
+sudo chmod +x /usr/local/share/chromedriver
+sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+
+# Install Selenium.
+wget -N http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar -P ~/
+sudo mv -f ~/selenium-server-standalone-3.0.1.jar /usr/local/share/
+sudo chmod +x /usr/local/share/selenium-server-standalone-3.0.1.jar
+sudo ln -s /usr/local/share/selenium-server-standalone-3.0.1.jar /usr/local/bin/selenium-server-standalone-3.0.1.jar
+
 sudo apt-get clean
-sudo reboot
+sudo service apache2 stop
+sudo service apache2 start
