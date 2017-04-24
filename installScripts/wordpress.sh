@@ -70,6 +70,7 @@ sudo rm hello.php
 sudo git clone https://github.com/Hitman007/Wordpress-Pickles.git
 sudo git clone https://Hitman007@bitbucket.org/Hitman007/crg_mods.git
 sudo git clone https://github.com/Hitman007/NevadaCat.git
+sudo git clone https://github.com/Hitman007/CRG-Mods.git
 sudo wp plugin install woocommerce
 
 sudo chmod -R 777 /var/www
@@ -107,3 +108,5 @@ sudo ln -s /usr/local/share/selenium-server-standalone-3.0.1.jar /usr/local/bin/
 sudo apt-get clean
 sudo service apache2 stop
 sudo service apache2 start
+cd /var/www/html/wp-content/plugins/CRG-Mods
+vendor/bin/codecept run -v --html
