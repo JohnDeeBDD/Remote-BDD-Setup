@@ -1,7 +1,6 @@
 #!/bin/sh
 #
 # source <(curl -s https://raw.githubusercontent.com/Hitman007/Remote-BDD-Setup/master/installScripts/wordpress.sh)
-# source <(curl -s https://gist.githubusercontent.com/ziadoz/3e8ab7e944d02fe872c3454d17af31a5/raw/61420c1e940db79cf9b800a97c1bb6cda90126c9/install.sh)
 # Directions: http://customrayguns.com/wp-bdd-software/
 # DeMomentSomTres Export
 #
@@ -107,5 +106,3 @@ sudo ln -s /usr/local/share/selenium-server-standalone-3.0.1.jar /usr/local/bin/
 sudo apt-get clean
 sudo service apache2 stop
 sudo service apache2 start
-cd /var/www/html/wp-content/plugins/CRG-Mods
-vendor/bin/codecept run -v --html
