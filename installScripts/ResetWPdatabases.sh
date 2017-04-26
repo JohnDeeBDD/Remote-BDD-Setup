@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# source <(curl -s https://raw.githubusercontent.com/Hitman007/Remote-BDD-Setup/master/installScripts/wordpress.sh)
+# source <(curl -s https://raw.githubusercontent.com/Hitman007/Remote-BDD-Setup/master/installScripts/ResetWPdatabases.sh)
 
 mysql -u root -ppassword << EOF
 DROP DATABASE wordpress;
