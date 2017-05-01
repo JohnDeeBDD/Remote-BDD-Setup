@@ -57,6 +57,12 @@ GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password'
 FLUSH PRIVILEGES;
 EOF
 
+mysql -u root -ppassword << EOF
+CREATE DATABASE wordprees_unit_test DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+GRANT ALL ON wordprees_unit_test.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;
+EOF
+
 #install Wordpress CLI
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
