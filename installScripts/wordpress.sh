@@ -68,10 +68,10 @@ sudo rm -fr akismet
 sudo rm hello.php
 sudo git clone https://github.com/Hitman007/Wordpress-Pickles.git
 sudo git clone https://github.com/Hitman007/CRG-Mods.git
-https://github.com/Hitman007/WPBDD-Scaffold.git
-https://github.com/Hitman007/WPBDD-First-failing-test.git
-https://github.com/Hitman007/WPBDD-First-passing-test.git
-https://github.com/Hitman007/WPBDDTUT-FINISH.git
+sudo git clone https://github.com/Hitman007/WPBDD-Scaffold.git
+sudo git clone https://github.com/Hitman007/WPBDD-First-failing-test.git
+sudo git clone https://github.com/Hitman007/WPBDD-First-passing-test.git
+sudo git clone https://github.com/Hitman007/WPBDDTUT-FINISH.git
 
 sudo chmod -R 777 /var/www
 
