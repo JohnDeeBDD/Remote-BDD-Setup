@@ -62,11 +62,6 @@ GRANT ALL ON wordprees_unit_test.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 
 FLUSH PRIVILEGES;
 EOF
 
-#install Wordpress CLI
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-chmod +x wp-cli.phar
-sudo mv wp-cli.phar /usr/local/bin/wp
-
 # Wordpress plugins:
 cd /var/www/html/wp-content/plugins
 sudo rm -fr akismet
@@ -79,6 +74,13 @@ https://github.com/Hitman007/WPBDD-First-passing-test.git
 https://github.com/Hitman007/WPBDDTUT-FINISH.git
 
 sudo chmod -R 777 /var/www
+
+#install Wordpress CLI
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+sudo wp plugin activate hitman
+sudo wp plugin activate Hitman
 
 # Install ChromeDriver.
 wget -N http://chromedriver.storage.googleapis.com/2.27/chromedriver_linux64.zip -P ~/
