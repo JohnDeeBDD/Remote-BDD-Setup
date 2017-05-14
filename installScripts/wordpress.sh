@@ -2,7 +2,6 @@
 #
 # source <(curl -s https://raw.githubusercontent.com/Hitman007/Remote-BDD-Setup/master/installScripts/wordpress.sh)
 # Directions: http://customrayguns.com/wp-bdd-software/
-# DeMomentSomTres Export
 #
 sudo apt-get -y update
 sudo apt-get -y upgrade
@@ -73,9 +72,7 @@ cd /var/www/html/wp-content/plugins
 sudo rm -fr akismet
 sudo rm hello.php
 sudo git clone https://github.com/Hitman007/Wordpress-Pickles.git
-sudo git clone https://github.com/Hitman007/NevadaCat.git
 sudo git clone https://github.com/Hitman007/CRG-Mods.git
-sudo wp plugin install woocommerce
 
 sudo chmod -R 777 /var/www
 
