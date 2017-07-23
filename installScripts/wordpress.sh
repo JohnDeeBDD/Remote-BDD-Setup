@@ -66,26 +66,10 @@ EOF
 cd /var/www/html/wp-content/plugins
 sudo rm -fr akismet
 sudo rm hello.php
-sudo git clone https://github.com/Hitman007/Wordpress-Pickles.git
 sudo git clone https://github.com/Hitman007/CRG-Mods.git
-sudo git clone https://github.com/Hitman007/WPBDDTUT-FINISH.git
+sudo git clone https://github.com/Hitman007/WPbdd.git
 
 sudo chmod -R 777 /var/www
-
-#install Wordpress CLI
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-chmod +x wp-cli.phar
-sudo mv wp-cli.phar /usr/local/bin/wp
-sudo wp plugin activate hitman
-sudo wp plugin activate Hitman
-
-# Install ChromeDriver.
-wget -N http://chromedriver.storage.googleapis.com/2.27/chromedriver_linux64.zip -P ~/
-unzip ~/chromedriver_linux64.zip -d ~/
-rm ~/chromedriver_linux64.zip
-sudo mv -f ~/chromedriver /usr/local/share/
-sudo chmod +x /usr/local/share/chromedriver
-sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 
 #install phantomJS
 sudo apt-get -y install build-essential chrpath libssl-dev libxft-dev
@@ -94,12 +78,6 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #to run phantomjs:
 # cd /var/www/html/wp-content/plugins/NevadaCat/vendor/phantomjs
 # ./phantomjs --webdriver=4444
-
-# Install Selenium.
-wget -N http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.4.0.jar -P ~/
-sudo mv -f ~/selenium-server-standalone-3.4.0.jar /usr/local/share/
-sudo chmod +x /usr/local/share/selenium-server-standalone-3.4.0.jar
-sudo ln -s /usr/local/share/selenium-server-standalone-3.4.0.jar /usr/local/bin/selenium-server-standalone-3.4.0.jar
 
 sudo apt-get clean
 sudo service apache2 stop
