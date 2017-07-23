@@ -10,7 +10,7 @@ sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.
 sudo dpkg -i google-chrome*.deb
 sudo apt-get -f install
 sudo apt-get -y install nodejs-legacy
-sudo apt-get -y install xfce4
+sudo apt-get -y install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
 sudo apt-get -y install vnc4server
 sudo apt-get -y install php php-curl php-gd php-mbstring php-mcrypt php-xml php-xmlrpc
 sudo apt-get -y install firefox
