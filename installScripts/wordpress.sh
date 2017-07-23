@@ -58,7 +58,7 @@ EOF
 
 mysql -u root -ppassword << EOF
 CREATE DATABASE wordprees_unit_test DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-GRANT ALL ON wordprees_unit_test.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL ON wordpress_unit_test.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
 FLUSH PRIVILEGES;
 EOF
 
