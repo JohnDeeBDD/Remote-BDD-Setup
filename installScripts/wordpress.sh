@@ -79,4 +79,4 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 # ./phantomjs --webdriver=4444
 
 sudo apt-get clean
-sudo service apache2 restart
+sudo reboot
