@@ -20,7 +20,7 @@ sudo apt-get -y install npm
 sudo apt-get -y install zip
 sudo apt-get -y install unzip
 sudo apt-get -y install php-zip
-sudo apt-get -y expect
+sudo apt-get -y install expect
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
 sudo apt-get -y install lamp-server^
@@ -77,6 +77,22 @@ sudo apt-get -y install libfreetype6 libfreetype6-dev
 sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #to run phantomjs:
 # ./phantomjs --webdriver=4444
+
+#startup VNCserver
+prog=/usr/bin/vncpasswd
+mypass="password"
+
+/usr/bin/expect <<EOF
+spawn "$prog"
+expect "Password:"
+send "$mypass\r"
+expect "Verify:"
+send "$mypass\r"
+expect eof
+exit
+EOF
+sudo vncserver :1
+vncserver -kill :1
 
 sudo apt-get clean
 sudo reboot
