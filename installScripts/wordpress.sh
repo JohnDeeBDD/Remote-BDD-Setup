@@ -78,7 +78,7 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #to run phantomjs:
 # ./phantomjs --webdriver=4444
 
-#startup VNCserver
+#set VNC password
 prog=/usr/bin/vncpasswd
 mypass="password"
 
