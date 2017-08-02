@@ -91,8 +91,8 @@ send "$mypass\r"
 expect eof
 exit
 EOF
-sudo vncserver :1
-sudo vncserver -kill :1
+#sudo vncserver :1
+#sudo vncserver -kill :1
 
 sudo apt-get clean
 sudo reboot
