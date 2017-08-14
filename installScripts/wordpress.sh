@@ -79,7 +79,7 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 # ./phantomjs --webdriver=4444
 
 prog=/usr/bin/vncpasswd
-mypass="newpass"
+mypass="password"
 
 /usr/bin/expect <<EOF
 spawn "$prog"
