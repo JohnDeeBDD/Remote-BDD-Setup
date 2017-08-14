@@ -16,3 +16,5 @@ exit
 EOF
 sudo vncserver :1
 vncserver -kill :1
+curl -o delete.me https://raw.githubusercontent.com/Hitman007/Remote-BDD-Setup/master/installScripts/vncstartup
+sudo cp -f delete.me ~/.vnc/xstartup
