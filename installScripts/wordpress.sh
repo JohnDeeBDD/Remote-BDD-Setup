@@ -78,20 +78,5 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #to run phantomjs:
 # ./phantomjs --webdriver=4444
 
-prog=/usr/bin/vncpasswd
-mypass="password"
-
-/usr/bin/expect <<EOF
-spawn "$prog"
-expect "Password:"
-send "$mypass\r"
-expect "Verify:"
-send "$mypass\r"
-expect eof
-exit
-EOF
-sudo vncserver :1
-vncserver -kill :1
-
 sudo apt-get clean
 sudo reboot
