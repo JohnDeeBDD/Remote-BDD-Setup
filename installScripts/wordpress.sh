@@ -66,11 +66,11 @@ EOF
 cd /var/www/html/wp-content/plugins
 sudo rm -fr akismet
 sudo rm hello.php
-sudo git clone https://github.com/Hitman007/CRG-Mods.git
-sudo git clone https://github.com/Hitman007/WPbdd.git
-
+#sudo git clone https://github.com/Hitman007/CRG-Mods.git
+sudo git clone https://github.com/JohnDeeBDD/WPbdd.git
 sudo chmod -R 777 /var/www
-
+cd /var/www/html/wp-content/plugins/WPbdd
+composer install
 #install phantomJS
 sudo apt-get -y install build-essential chrpath libssl-dev libxft-dev
 sudo apt-get -y install libfreetype6 libfreetype6-dev
