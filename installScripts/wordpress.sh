@@ -49,6 +49,11 @@ sudo chmod g+w /var/www/html/wp-content
 sudo chmod -R g+w /var/www/html/wp-content/plugins
 sudo chmod -R g+w /var/www/html/wp-content/themes
 
+#Coddiad
+sudo git clone https://github.com/Codiad/Codiad /var/www/html/codiad
+sudo touch /var/www/html/codiad/config.php
+sudo chown www-data:www-data -R /var/www/html/codiad/
+
 mysql -u root -ppassword << EOF
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
