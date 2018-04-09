@@ -1,5 +1,6 @@
 #!/bin/sh
 #
+# you may have to install curl first with: sudo apt-get install curl
 # source <(curl -s https://raw.githubusercontent.com/johndeebdd/Remote-BDD-Setup/master/installScripts/wordpress.sh)
 # Directions: https://wp-bdd.com/bdd-wp-aws/
 #
@@ -17,6 +18,7 @@ sudo apt-get -y install default-jdk
 sudo apt-get -y install libxss1 libappindicator1 libindicator7
 sudo apt-get -y install openjdk-8-jre-headless xvfb libxi6 libgconf-2-4
 sudo apt-get -y install npm
+sudo apt-get -y install git
 sudo apt-get -y install zip
 sudo apt-get -y install unzip
 sudo apt-get -y install php-zip
