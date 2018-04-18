@@ -58,12 +58,6 @@ sudo chmod g+w /var/www/html/wp-content
 sudo chmod -R g+w /var/www/html/wp-content/plugins
 sudo chmod -R g+w /var/www/html/wp-content/themes
 
-#sudo chown -R ubuntu:www-data /var/www/html
-#sudo find /var/www/html -type d -exec chmod g+s {} \;
-#sudo chmod g+w /var/www/html/wp-content
-#sudo chmod -R g+w /var/www/html/wp-content/plugins
-#sudo chmod -R g+w /var/www/html/wp-content/themes
-
 #Coddiad
 sudo git clone https://github.com/Codiad/Codiad /var/www/html/codiad
 sudo touch /var/www/html/codiad/config.php
@@ -90,7 +84,7 @@ sudo rm hello.php
 sudo git clone https://github.com/JohnDeeBDD/WPbdd.git
 sudo chmod -R 777 /var/www
 cd /var/www/html/wp-content/plugins/WPbdd/tests
-replace "http://replaceme.com" $varurl -- runner.suite.yml
+sudo replace "http://replaceme.com" $varurl -- runner.suite.yml
 cd /var/www/html/wp-content/plugins/WPbdd
 composer install
 #install phantomJS
