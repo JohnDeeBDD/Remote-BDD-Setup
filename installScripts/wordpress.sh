@@ -48,16 +48,18 @@ sudo mv -v /var/www/html/wordpress/* /var/www/html/
 sudo rm -fr /var/www/html/wordpress
 sudo rm /var/www/html/index.html
 sudo rm /var/www/html/latest.tar.gz
+
 sudo chown -R ubuntu:www-data /var/www/html
 sudo find /var/www/html -type d -exec chmod g+s {} \;
 sudo chmod g+w /var/www/html/wp-content
 sudo chmod -R g+w /var/www/html/wp-content/plugins
 sudo chmod -R g+w /var/www/html/wp-content/themes
-sudo chown -R ubuntu:www-data /var/www/html
-sudo find /var/www/html -type d -exec chmod g+s {} \;
-sudo chmod g+w /var/www/html/wp-content
-sudo chmod -R g+w /var/www/html/wp-content/plugins
-sudo chmod -R g+w /var/www/html/wp-content/themes
+
+#sudo chown -R ubuntu:www-data /var/www/html
+#sudo find /var/www/html -type d -exec chmod g+s {} \;
+#sudo chmod g+w /var/www/html/wp-content
+#sudo chmod -R g+w /var/www/html/wp-content/plugins
+#sudo chmod -R g+w /var/www/html/wp-content/themes
 
 #Coddiad
 sudo git clone https://github.com/Codiad/Codiad /var/www/html/codiad
