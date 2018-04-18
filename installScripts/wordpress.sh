@@ -93,5 +93,6 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #to run phantomjs:
 # ./phantomjs --webdriver=4444
 
+sudo chmod 777 -R /var/www/html
 sudo apt-get clean
 sudo reboot
