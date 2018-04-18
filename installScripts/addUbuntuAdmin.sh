@@ -7,7 +7,7 @@ echo Add a user?
 read USR
 echo Password?
 read PASS
-sudo adduser $USR --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
+sudo adduser $USR --gecos "First Last,RoomNumber,WorkPhone,HomePhone" -p$PASS
 # This will actually set the password:
 echo "$USR:$PASS" | chpasswd
 sudo usermod -aG sudo $USR
