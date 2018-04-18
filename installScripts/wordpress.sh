@@ -98,3 +98,6 @@ sudo chmod 777 -R /var/www/html
 sudo apt-get clean
 #sudo reboot
 sudo service apache2 restart
+cd /var/www/html/wp-content/plugins/WPbdd
+bin/codecept build
+bin/codecept run runner -vvv --html
