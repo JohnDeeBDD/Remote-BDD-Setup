@@ -106,7 +106,7 @@ sudo service apache2 restart
 cd /var/www/html/wp-content/plugins/WPbdd
 bin/codecept build
 bin/codecept run runner -vvv --html
-wp theme install Responsive Kubrick --activate
+bin/wp theme install responsive-kubrick --activate
 
 #removes password auth
 sudo sed -i -e '/^PasswordAuthentication / s/ .*/ yes/' /etc/ssh/sshd_config
