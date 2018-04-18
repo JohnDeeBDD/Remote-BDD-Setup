@@ -6,6 +6,7 @@
 #
 #sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 #sudo dpkg -i google-chrome*.deb
+clear
 echo What is the URL of the site?
 read varurl
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
