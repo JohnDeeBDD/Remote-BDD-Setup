@@ -6,8 +6,7 @@ echo Add a user?
 read USR
 echo Password?
 read PASS
-adduser $USR
+sudo adduser $USR
 # This will actually set the password:
 echo "$USR:$PASS" | chpasswd
-adduser $USR
-usermod -aG sudo $USR
+sudo usermod -aG sudo $USR
