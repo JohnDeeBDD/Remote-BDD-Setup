@@ -6,6 +6,8 @@
 #
 #sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 #sudo dpkg -i google-chrome*.deb
+echo What is the URL of the site?
+read varurl
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get -y update
@@ -87,6 +89,8 @@ sudo rm hello.php
 #sudo git clone https://github.com/Hitman007/CRG-Mods.git
 sudo git clone https://github.com/JohnDeeBDD/WPbdd.git
 sudo chmod -R 777 /var/www
+cd /var/www/html/wp-content/plugins/WPbdd/tests
+replace "http://replaceme.com" $varurl -- runner.suite.yml
 cd /var/www/html/wp-content/plugins/WPbdd
 composer install
 #install phantomJS
