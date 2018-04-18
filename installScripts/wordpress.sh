@@ -35,7 +35,7 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again p
 sudo apt-get -y install lamp-server^
 sudo a2enmod rewrite
 
-#setup swap:
+#setup swap on Ubuntu:
 sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
 sudo /sbin/mkswap /var/swap.1
 sudo /sbin/swapon /var/swap.1
@@ -52,14 +52,14 @@ sudo mv -v /var/www/html/wordpress/* /var/www/html/
 sudo rm -fr /var/www/html/wordpress
 sudo rm /var/www/html/index.html
 sudo rm /var/www/html/latest.tar.gz
-
+#setup PHP to own the WordPress directory:
 sudo chown -R ubuntu:www-data /var/www/html
 sudo find /var/www/html -type d -exec chmod g+s {} \;
 sudo chmod g+w /var/www/html/wp-content
 sudo chmod -R g+w /var/www/html/wp-content/plugins
 sudo chmod -R g+w /var/www/html/wp-content/themes
 
-#Coddiad
+#Coddiad IDE. Access Codeiad via a browser @ {domainURL.com/codiad}
 sudo git clone https://github.com/Codiad/Codiad /var/www/html/codiad
 sudo touch /var/www/html/codiad/config.php
 sudo chown www-data:www-data -R /var/www/html/codiad/
@@ -88,17 +88,24 @@ cd /var/www/html/wp-content/plugins/WPbdd/tests
 sudo replace "http://replaceme.com" $varurl -- runner.suite.yml
 cd /var/www/html/wp-content/plugins/WPbdd
 composer install
+
 #install phantomJS
 sudo apt-get -y install build-essential chrpath libssl-dev libxft-dev
 sudo apt-get -y install libfreetype6 libfreetype6-dev
 sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #to run phantomjs:
+# cd /var/www/html/wp-content/plugins/WPbdd
 # ./phantomjs --webdriver=4444
 
+#cleanup:
 sudo chmod 777 -R /var/www/html
 sudo apt-get clean
-#sudo reboot
 sudo service apache2 restart
+
+#activate WordPress via the Codeception runner:
 cd /var/www/html/wp-content/plugins/WPbdd
 bin/codecept build
 bin/codecept run runner -vvv --html
+
+#removes password auth
+sudo sed -i -e '/^PasswordAuthentication / s/ .*/ yes/' /etc/ssh/sshd_config
