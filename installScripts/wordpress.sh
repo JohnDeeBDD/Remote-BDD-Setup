@@ -108,6 +108,7 @@ cd /var/www/html/wp-content/plugins/WPbdd
 bin/codecept build
 bin/codecept run runner -vvv --html
 bin/wp theme install responsive-kubrick --activate
+bin/wp plugin activate FastRegister
 
 #removes password auth
 sudo sed -i -e '/^PasswordAuthentication / s/ .*/ yes/' /etc/ssh/sshd_config
