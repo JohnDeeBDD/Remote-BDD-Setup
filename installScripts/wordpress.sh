@@ -113,3 +113,7 @@ bin/wp widget add my_widget sidebar-1 1
 
 #removes password auth
 sudo sed -i -e '/^PasswordAuthentication / s/ .*/ yes/' /etc/ssh/sshd_config
+sudo adduser freelancer --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
+# This will actually set the password:
+echo "freelancer:password" | sudo chpasswd
+sudo usermod -aG sudo freelancer
