@@ -117,3 +117,4 @@ sudo adduser freelancer --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --di
 # This will actually set the password:
 echo "freelancer:password" | sudo chpasswd
 sudo usermod -aG sudo freelancer
+sudo reboot
