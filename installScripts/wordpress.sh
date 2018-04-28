@@ -87,6 +87,7 @@ sudo git clone https://github.com/JohnDeeBDD/FastRegister.git
 sudo chmod -R 777 /var/www
 cd /var/www/html/wp-content/plugins/WPbdd/tests
 sudo replace "http://replaceme.com" $varurl -- runner.suite.yml
+sudo replace "http://replaceme.com" $varurl -- acceptance.suite.yml
 cd /var/www/html/wp-content/plugins/WPbdd
 composer install
 
