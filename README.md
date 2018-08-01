@@ -4,7 +4,7 @@ Ubuntu16 Wordpress BDD setup
 
 More information:
 
-https://wordpress-bdd.com/bdd-wp-aws/
+https://generalchicken.net/bdd-wp-aws/
 
 To launch this script type:
 
