@@ -13,7 +13,7 @@ clear
 echo What is the directory name?
 read vardir
 cd /var/www/html/wp-content/plugins
-git clone $vargit
+sudo git clone $vargit
 cd $vardir
 composer install
 cd tests/acceptance
