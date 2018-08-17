@@ -86,10 +86,15 @@ sudo git clone https://github.com/JohnDeeBDD/WPbdd.git
 sudo git clone https://github.com/JohnDeeBDD/FastRegister.git
 sudo chmod -R 777 /var/www
 cd /var/www/html/wp-content/plugins/WPbdd/tests
-sudo replace "http://replaceme.com" $varurl -- runner.suite.yml
-sudo replace "http://replaceme.com" $varurl -- acceptance.suite.yml
+sudo replace "replaceme.com" $varurl -- runner.suite.yml
+sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
 cd /var/www/html/wp-content/plugins/WPbdd
 composer install
+
+#setup apache conf
+sudo mv /var/www/html/wp-content/plugins/WPbdd/apacheconf.txt /etc/apache2/sites-available/000-default.conf
+cd /etc/apache2/sites-available/
+sudo replace replaceme.com $varurl -- 000-default.conf
 
 #install phantomJS
 sudo apt-get -y install build-essential chrpath libssl-dev libxft-dev
