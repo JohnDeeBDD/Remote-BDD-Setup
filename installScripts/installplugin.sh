@@ -8,10 +8,10 @@ echo What is the domain name of the site?
 read varurl
 clear
 echo What is the git clone URL?
-read varurl
+read vargit
 clear
 echo What is the directory name?
-read varurl
+read vardir
 cd /var/www/html/wp-content/plugins
 git clone $vargit
 cd $vardir
