@@ -14,6 +14,7 @@ echo What is the directory name?
 read vardir
 cd /var/www/html/wp-content/plugins
 sudo git clone $vargit
+sudo chmod -R 777 $vardir
 cd $vardir
 sudo composer install
 cd tests/acceptance
