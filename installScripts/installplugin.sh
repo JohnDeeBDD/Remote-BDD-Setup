@@ -15,6 +15,6 @@ read vardir
 cd /var/www/html/wp-content/plugins
 sudo git clone $vargit
 cd $vardir
-composer install
+sudo composer install
 cd tests/acceptance
 sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
