@@ -17,5 +17,5 @@ sudo git clone $vargit
 sudo chmod -R 777 $vardir
 cd $vardir
 composer install
-cd tests/acceptance
+cd tests
 sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
