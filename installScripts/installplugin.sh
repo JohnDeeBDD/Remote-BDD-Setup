@@ -19,3 +19,4 @@ cd $vardir
 composer install
 cd tests
 sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
+cd ..
