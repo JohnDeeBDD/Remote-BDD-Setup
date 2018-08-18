@@ -124,4 +124,4 @@ bin/wp widget add my_widget sidebar-1 1
 #echo "freelancer:password" | sudo chpasswd
 #sudo usermod -aG sudo freelancer
 
-sudo reboot
+sudo service apache2 restart
