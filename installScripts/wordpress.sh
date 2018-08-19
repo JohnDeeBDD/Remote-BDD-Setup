@@ -109,14 +109,14 @@ sudo chmod 777 -R /var/www/html
 sudo apt-get clean
 sudo service apache2 restart
 
-#activate WordPress via the Codeception runner:
+#activate WordPress via the Codeception runner and CLI:
 cd /var/www/html/wp-content/plugins/WPbdd
 bin/codecept build
 bin/codecept run runner -vvv --html
 bin/wp theme install responsive-kubrick --activate
 bin/wp plugin activate FastRegister
 bin/wp widget add my_widget sidebar-1 1
-bin/wp prewrite structure '/%postname%/'
+bin/wp rewrite structure '/%postname%/'
 
 #removes password auth
 #sudo sed -i -e '/^PasswordAuthentication / s/ .*/ yes/' /etc/ssh/sshd_config
