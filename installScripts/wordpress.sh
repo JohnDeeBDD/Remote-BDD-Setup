@@ -116,6 +116,7 @@ bin/codecept run runner -vvv --html
 bin/wp theme install responsive-kubrick --activate
 bin/wp plugin activate FastRegister
 bin/wp widget add my_widget sidebar-1 1
+bin/wp prewrite structure '/%postname%/'
 
 #removes password auth
 #sudo sed -i -e '/^PasswordAuthentication / s/ .*/ yes/' /etc/ssh/sshd_config
