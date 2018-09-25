@@ -36,9 +36,9 @@ sudo apt-get -y install lamp-server^
 sudo a2enmod rewrite
 
 #setup swap on Ubuntu:
-#sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
-#sudo /sbin/mkswap /var/swap.1
-#sudo /sbin/swapon /var/swap.1
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+sudo /sbin/mkswap /var/swap.1
+sudo /sbin/swapon /var/swap.1
 
 # Composer:
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
