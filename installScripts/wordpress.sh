@@ -36,6 +36,7 @@ sudo apt-get -y install zip
 sudo apt-get -y install unzip
 sudo apt-get -y install php-zip
 sudo apt-get -y install expect
+sudo apt-get -y install php-gd
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
 sudo apt-get -y install lamp-server^
