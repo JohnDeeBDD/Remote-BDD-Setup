@@ -91,6 +91,7 @@ sudo rm hello.php
 #sudo git clone https://github.com/Hitman007/CRG-Mods.git
 sudo git clone https://github.com/JohnDeeBDD/WPbdd.git
 sudo git clone https://github.com/JohnDeeBDD/FastRegister.git
+sudo git clone https://github.com/JohnDeeBDD/better-error-messages.git
 sudo chmod -R 777 /var/www
 cd /var/www/html/wp-content/plugins/WPbdd/tests
 sudo replace "replaceme.com" $varurl -- runner.suite.yml
