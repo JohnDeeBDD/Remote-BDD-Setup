@@ -134,11 +134,11 @@ echo "freelancer:password" | sudo chpasswd
 sudo usermod -aG sudo freelancer
 
 #cloud9
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install nodejs
-sudo apt-get install python-minimal
-sudo mkdir ~/cloud9
-sudo ln -s /var/www/html/wp-content/plugins /cloud9
-sudo service apache2 restart
-nano ~/.ssh/authorized_keys
+#curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+#curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+#sudo apt-get install nodejs
+#sudo apt-get install python-minimal
+#sudo mkdir ~/cloud9
+#sudo ln -s /var/www/html/wp-content/plugins /cloud9
+#sudo service apache2 restart
+#nano ~/.ssh/authorized_keys
