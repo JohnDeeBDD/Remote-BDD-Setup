@@ -140,5 +140,5 @@ sudo apt-get install nodejs
 sudo apt-get install python-minimal
 sudo mkdir ~/cloud9
 sudo ln -s /var/www/html/wp-content/plugins /cloud9
-
 sudo service apache2 restart
+nano ~/.ssh/authorized_keys
