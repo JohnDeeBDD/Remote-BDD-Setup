@@ -113,6 +113,9 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 # cd /var/www/html/wp-content/plugins/WPbdd
 # ./phantomjs --webdriver=4444
 
+#install nodeJS
+sudo apt install nodejs
+
 #cleanup:
 sudo chmod 777 -R /var/www/html
 sudo apt-get clean
