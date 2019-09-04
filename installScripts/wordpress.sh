@@ -93,10 +93,17 @@ sudo rm hello.php
 sudo git clone https://github.com/JohnDeeBDD/WPbdd.git
 sudo git clone https://github.com/JohnDeeBDD/FastRegister.git
 sudo git clone https://github.com/JohnDeeBDD/better-error-messages.git
+sudo git clone https://github.com/JohnDeeBDD/external-content-portfolio.git
 sudo chmod -R 777 /var/www
 cd /var/www/html/wp-content/plugins/WPbdd/tests
 sudo replace "replaceme.com" $varurl -- runner.suite.yml
 sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
+
+cd /var/www/html/wp-content/plugins/external-content-portfolio/tests
+sudo replace "replaceme.com" $varurl -- runner.suite.yml
+sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
+cd ..
+composer install
 cd /var/www/html/wp-content/plugins/WPbdd
 composer install
 
