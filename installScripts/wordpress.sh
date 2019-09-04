@@ -112,6 +112,7 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #to run phantomjs:
 # cd /var/www/html/wp-content/plugins/WPbdd
 # ./phantomjs --webdriver=4444
+#xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar
 
 #install nodeJS
 sudo apt install nodejs
