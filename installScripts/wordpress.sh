@@ -17,8 +17,8 @@ sudo apt-get -y upgrade
 #sudo apt-get -y install google-chrome-stable
 #sudo apt-get -f install
 #sudo apt-get -y install nodejs-legacy
-sudo apt-get -y install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
-sudo apt-get -y install vnc4server
+#sudo apt-get -y install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+#sudo apt-get -y install vnc4server
 sudo apt-get -y install php 
 sudo apt-get -y install php-curl 
 sudo apt-get -y install php-gd 
@@ -26,7 +26,7 @@ sudo apt-get -y install php-mbstring
 sudo apt-get -y install php-mcrypt 
 sudo apt-get -y install php-xml 
 sudo apt-get -y install php-xmlrpc
-sudo apt-get -y install firefox
+#sudo apt-get -y install firefox
 #sudo apt-get -y install default-jdk
 sudo apt-get -y install libxss1 libappindicator1 libindicator7
 sudo apt-get -y install openjdk-8-jre
