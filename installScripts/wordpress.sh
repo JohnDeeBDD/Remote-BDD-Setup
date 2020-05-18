@@ -32,12 +32,8 @@ sudo apt-get -y install libxss1 libappindicator1 libindicator7
 sudo apt-get -y install openjdk-8-jre
 sudo apt-get -y install openjdk-8-jre-headless xvfb libxi6 libgconf-2-4
 #sudo apt-get -y install npm
-sudo apt-get -y install git
-sudo apt-get -y install zip
-sudo apt-get -y install unzip
-sudo apt-get -y install php-zip
+sudo apt-get -y install git zip unzip php-zip
 sudo apt-get -y install expect
-sudo apt-get -y install php-gd
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
 sudo apt-get -y install lamp-server^
