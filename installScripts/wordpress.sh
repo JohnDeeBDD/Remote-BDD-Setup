@@ -19,7 +19,7 @@ sudo apt-get -y upgrade
 #sudo apt-get -y install nodejs-legacy
 #sudo apt-get -y install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
 #sudo apt-get -y install vnc4server
-sudo apt-get -y install php php-curl php-gd php-mcrypt php-xml php-xmlrpc
+sudo apt-get -y install php php-curl php-gd php-xml php-xmlrpc
 #sudo apt-get -y install firefox
 #sudo apt-get -y install default-jdk
 sudo apt-get -y install libxss1 libappindicator1 libindicator7
