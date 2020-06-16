@@ -12,4 +12,4 @@ sudo rm /var/www/html/wp-config.php
 cd /var/www/html/wp-content/plugins/migrate-posts/
 bin/codecept run tools -vvv
 cd /var/www/html/wp-content/plugins/migrate-posts/
-sudo bin/wp rewrite structure '/%postname%/'
+bin/wp rewrite structure '/%postname%/'
