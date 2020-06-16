@@ -8,5 +8,4 @@ CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
 FLUSH PRIVILEGES;
 EOF
-rm /var/www/html/wp-config.php
-bin/codecept run acceptance SetupWPCept.php
+sudo rm /var/www/html/wp-config.php
