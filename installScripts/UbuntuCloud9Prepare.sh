@@ -1,4 +1,4 @@
-
+#source <(curl -s https://raw.githubusercontent.com/johndeebdd/Remote-BDD-Setup/master/installScripts/UbuntuCloud9Prepare.sh)
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt install nodejs
 sudo apt-get upgrade && sudo apt-get update
