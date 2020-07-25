@@ -4,8 +4,6 @@
 #  - /etc/php/7.2/cli/conf.d/15-xml.ini
 #  - /etc/php/7.2/cli/conf.d/20-calendar.ini
 # source <(curl -s https://raw.githubusercontent.com/JohnDeeBDD/Remote-BDD-Setup/master/installScripts/PHPenabler.sh)
-sudo phpenmod
-sudo phpenmod
 sudo phpenmod ctype
 sudo phpenmod curl
 sudo phpenmod exif
