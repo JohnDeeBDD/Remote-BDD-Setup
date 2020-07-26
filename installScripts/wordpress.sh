@@ -3,10 +3,6 @@
 # you may have to install curl first with: sudo apt-get install curl
 # source <(curl -s https://raw.githubusercontent.com/johndeebdd/Remote-BDD-Setup/master/installScripts/wordpress.sh)
 # Directions: https://generalchicken.net/bdd-wp-aws/
-#
-#sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-#sudo dpkg -i google-chrome*.deb
-
 
 #chromedriver
 cd /var/www
