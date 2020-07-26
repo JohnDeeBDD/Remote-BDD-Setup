@@ -119,7 +119,7 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar
 
 #install nodeJS
-sudo apt install nodejs
+sudo apt-get -y install nodejs
 
 #cleanup:
 sudo chmod 777 -R /var/www/html
