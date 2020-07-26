@@ -31,6 +31,7 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
 sudo apt-get -y install lamp-server^
 sudo a2enmod rewrite
+sudo apt-get install php-mbstring
 
 #setup swap on Ubuntu:
 #sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
