@@ -152,3 +152,6 @@ sudo usermod -aG sudo freelancer
 #sudo ln -s /var/www/html/wp-content/plugins /cloud9
 sudo service apache2 restart
 #nano ~/.ssh/authorized_keys
+
+#cloud9 symbolic link
+ln -s /var/www/html /home/ubuntu
