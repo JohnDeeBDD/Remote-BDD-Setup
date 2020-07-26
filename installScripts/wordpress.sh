@@ -113,8 +113,8 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 
 #chromedriver
 cd /var/www
-sudo wget https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
+sudo wget -y https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
+unzip -y chromedriver_linux64.zip
 
 #install nodeJS
 sudo apt install nodejs
