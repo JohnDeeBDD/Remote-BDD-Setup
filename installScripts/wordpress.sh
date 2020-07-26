@@ -14,7 +14,7 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 sudo apt-get -y update
 sudo apt-get -y upgrade 
 #sudo apt-get install google-chrome-stable
-#sudo apt-get -y install google-chrome-stable
+sudo apt-get -y install google-chrome-stable
 #sudo apt-get -f install
 #sudo apt-get -y install nodejs-legacy
 #sudo apt-get -y install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
@@ -110,6 +110,11 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 # cd /var/www/html/wp-content/plugins/WPbdd
 # ./phantomjs --webdriver=4444
 #xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar
+
+#chromedriver
+cd /var/www
+sudo wget https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip
 
 #install nodeJS
 sudo apt install nodejs
