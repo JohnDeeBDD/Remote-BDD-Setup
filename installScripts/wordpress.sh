@@ -6,6 +6,13 @@
 #
 #sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 #sudo dpkg -i google-chrome*.deb
+
+
+#chromedriver
+cd /var/www
+sudo wget -y https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
+unzip -y chromedriver_linux64.zip
+
 clear
 echo What is the domain name of the site?
 read varurl
@@ -110,11 +117,6 @@ sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 # cd /var/www/html/wp-content/plugins/WPbdd
 # ./phantomjs --webdriver=4444
 #xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar
-
-#chromedriver
-cd /var/www
-sudo wget -y https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
-unzip -y chromedriver_linux64.zip
 
 #install nodeJS
 sudo apt install nodejs
