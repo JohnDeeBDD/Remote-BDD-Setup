@@ -126,6 +126,7 @@ sudo service apache2 restart
 
 #activate WordPress via the Codeception runner and CLI:
 cd /var/www/html/wp-content/plugins/WPbdd
+nohup xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar &>/dev/null &
 bin/codecept build
 bin/codecept run runner -vvv --html
 bin/wp theme install responsive-kubrick --activate
