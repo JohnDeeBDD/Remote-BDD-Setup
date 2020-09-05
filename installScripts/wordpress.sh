@@ -96,9 +96,9 @@ cd /var/www/html/wp-content/plugins/external-content-portfolio/tests
 sudo replace "replaceme.com" $varurl -- runner.suite.yml
 sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
 cd ..
-composer install
+#composer install
 cd /var/www/html/wp-content/plugins/WPbdd
-composer install
+#composer install
 
 #setup apache conf
 sudo mv /var/www/html/wp-content/plugins/WPbdd/apacheconf.txt /etc/apache2/sites-available/000-default.conf
@@ -133,11 +133,11 @@ bin/wp widget add my_widget sidebar-1 1
 bin/wp rewrite structure '/%postname%/'
 
 #removes password auth
-sudo sed -i -e '/^PasswordAuthentication / s/ .*/ yes/' /etc/ssh/sshd_config
-sudo adduser freelancer --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
+# sudo sed -i -e '/^PasswordAuthentication / s/ .*/ yes/' /etc/ssh/sshd_config
+# sudo adduser freelancer --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
 # This will actually set the password:
-echo "freelancer:password" | sudo chpasswd
-sudo usermod -aG sudo freelancer
+# echo "freelancer:password" | sudo chpasswd
+# sudo usermod -aG sudo freelancer
 
 #cloud9
 #curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
