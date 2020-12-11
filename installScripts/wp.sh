@@ -25,12 +25,12 @@ sudo apt-get -y upgrade
 #sudo apt-get -y install vnc4server
 
 #from https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions
-sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
+sudo apt-get -y install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl
 sudo apt-get -y install php-hash php-json php-sodium php-openssl
 
-sudo apt-get install build-essential checkinstall && apt-get build-dep imagemagick -y
-sudo apt install imagemagick
-sudo apt install php-imagick
+sudo apt-get -y install build-essential checkinstall && apt-get build-dep imagemagick -y
+sudo apt-get -y install imagemagick
+sudo apt-get -y install php-imagick
 
 #sudo apt-get -y install firefox
 #sudo apt-get -y install default-jdk
@@ -135,10 +135,10 @@ sudo service apache2 restart
 cd /var/www/html/wp-content/plugins/WPbdd
 nohup xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar &>/dev/null &
 bin/codecept build
-bin/codecept run runner -vvv --html
-bin/wp theme install responsive-kubrick --activate
-bin/wp plugin activate FastRegister
-bin/wp widget add my_widget sidebar-1 1
+#bin/codecept run runner -vvv --html
+#bin/wp theme install responsive-kubrick --activate
+#bin/wp plugin activate FastRegister
+#bin/wp widget add my_widget sidebar-1 1
 bin/wp rewrite structure '/%postname%/'
 
 #removes password auth
@@ -159,4 +159,4 @@ sudo service apache2 restart
 #nano ~/.ssh/authorized_keys
 
 #cloud9 symbolic link
-ln -s /var/www/html /home/ubuntu
+#ln -s /var/www/html /home/ubuntu
