@@ -5,9 +5,9 @@
 # Directions: https://generalchicken.net/bdd-wp-aws/
 
 #chromedriver
-cd /var/www
-sudo wget -y https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
-unzip -y chromedriver_linux64.zip
+#cd /var/www
+#sudo wget -y https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
+#unzip -y chromedriver_linux64.zip
 
 clear
 echo What is the domain name of the site?
@@ -16,7 +16,6 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get -y update
 sudo apt-get -y upgrade 
-#sudo apt-get install google-chrome-stable
 sudo apt-get -y install google-chrome-stable
 #sudo apt-get -f install
 #sudo apt-get -y install nodejs-legacy
@@ -106,9 +105,9 @@ cd /etc/apache2/sites-available/
 sudo replace replaceme.com $varurl -- 000-default.conf
 
 #install phantomJS
-sudo apt-get -y install build-essential chrpath libssl-dev libxft-dev
-sudo apt-get -y install libfreetype6 libfreetype6-dev
-sudo apt-get -y install libfontconfig1 libfontconfig1-dev
+#sudo apt-get -y install build-essential chrpath libssl-dev libxft-dev
+#sudo apt-get -y install libfreetype6 libfreetype6-dev
+#sudo apt-get -y install libfontconfig1 libfontconfig1-dev
 #to run phantomjs:
 # cd /var/www/html/wp-content/plugins/WPbdd
 # ./phantomjs --webdriver=4444
