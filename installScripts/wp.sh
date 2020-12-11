@@ -114,9 +114,9 @@ cd /var/www/html/wp-content/plugins/WPbdd
 #composer install
 
 #setup apache conf
-sudo mv /var/www/html/wp-content/plugins/WPbdd/apacheconf.txt /etc/apache2/sites-available/000-default.conf
-cd /etc/apache2/sites-available/
-sudo replace replaceme.com $varurl -- 000-default.conf
+#sudo mv /var/www/html/wp-content/plugins/WPbdd/apacheconf.txt /etc/apache2/sites-available/000-default.conf
+#cd /etc/apache2/sites-available/
+#sudo replace replaceme.com $varurl -- 000-default.conf
 
 #install phantomJS
 #sudo apt-get -y install build-essential chrpath libssl-dev libxft-dev
@@ -159,7 +159,7 @@ sudo service apache2 restart
 #sudo apt-get install python-minimal
 #sudo mkdir ~/cloud9
 #sudo ln -s /var/www/html/wp-content/plugins /cloud9
-sudo service apache2 restart
+#sudo service apache2 restart
 #nano ~/.ssh/authorized_keys
 
 #cloud9 symbolic link
