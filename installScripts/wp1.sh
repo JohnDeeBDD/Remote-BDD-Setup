@@ -61,3 +61,4 @@ sudo apt -y install mysql-server
 
 # Composer:
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+sudo apt-get -y install libapache2-mod-php7.4
