@@ -78,14 +78,14 @@ sudo chmod -R g+w /var/www/html/wp-content/themes
 #sudo touch /var/www/html/codiad/config.php
 #sudo chown www-data:www-data -R /var/www/html/codiad/
 
-mysql -u root -ppassword << EOF
+sudo mysql -u root -ppassword << EOF
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
 FLUSH PRIVILEGES;
 EOF
 
-mysql -u root -ppassword << EOF
+sudo mysql -u root -ppassword << EOF
 CREATE DATABASE wordpress_unit_test DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 GRANT ALL ON wordpress_unit_test.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
 FLUSH PRIVILEGES;
