@@ -41,7 +41,7 @@ sudo apt-get -y install git zip unzip php-zip
 sudo apt-get -y install expect
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
-sudo apt-get -y install lamp-server^
+#sudo apt-get -y install lamp-server^
 sudo a2enmod rewrite
 sudo apt-get -y install php-mbstring
 
