@@ -21,7 +21,12 @@ sudo apt-get -y install google-chrome-stable
 #sudo apt-get -y install nodejs-legacy
 #sudo apt-get -y install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
 #sudo apt-get -y install vnc4server
-sudo apt-get -y install php php-curl php-gd php-xml php-xmlrpc
+
+#from https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions
+sudo apt-get -y install php-curl php-dom php-exif php-fileinfo php-hash php-json php-mbstring php-mysqli php-sodium php-openssl php-pcre php-imagick php-xml php-zip
+
+#php-gd php-xml php-xmlrpc
+
 #sudo apt-get -y install firefox
 #sudo apt-get -y install default-jdk
 sudo apt-get -y install libxss1 libappindicator1 libindicator7
