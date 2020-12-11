@@ -23,9 +23,12 @@ sudo apt-get -y install google-chrome-stable
 #sudo apt-get -y install vnc4server
 
 #from https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions
-sudo apt-get -y install php-curl php-dom php-exif php-fileinfo php-hash php-json php-mbstring php-mysqli php-sodium php-openssl php-pcre php-imagick php-xml php-zip
+sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
+sudo apt-get -y install php-hash php-json php-sodium php-openssl
 
-#php-gd php-xml php-xmlrpc
+sudo apt-get install build-essential checkinstall && apt-get build-dep imagemagick -y
+sudo apt install imagemagick
+sudo apt install php-imagick
 
 #sudo apt-get -y install firefox
 #sudo apt-get -y install default-jdk
