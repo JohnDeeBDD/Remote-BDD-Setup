@@ -25,7 +25,7 @@ sudo apt-get -y upgrade
 #sudo apt-get -y install vnc4server
 
 #from https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions
-sudo apt-get update
+
 sudo apt -y install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
