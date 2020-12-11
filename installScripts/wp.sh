@@ -65,7 +65,7 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 sudo chmod -R 777 /var/www
 cd /var/www/html
 sudo wget https://wordpress.org/latest.tar.gz
-tar xfz latest.tar.gz
+sudo tar xfz latest.tar.gz
 sudo mv -v /var/www/html/wordpress/* /var/www/html/
 sudo rm -fr /var/www/html/wordpress
 sudo rm /var/www/html/index.html
