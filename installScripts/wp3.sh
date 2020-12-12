@@ -6,13 +6,13 @@
 sudo mysql -u root -ppassword << EOF
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL ON *.* TO 'wordpressuser'@'localhost';
 FLUSH PRIVILEGES;
 EOF
 
 sudo mysql -u root -ppassword << EOF
 CREATE DATABASE wordpress_unit_test DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-GRANT ALL ON wordpress_unit_test.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL ON *.* TO 'wordpressuser'@'localhost';
 FLUSH PRIVILEGES;
 EOF
 
