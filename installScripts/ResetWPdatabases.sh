@@ -9,8 +9,8 @@ GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password'
 FLUSH PRIVILEGES;
 EOF
 sudo rm /var/www/html/wp-config.php
-cd /var/www/html/wp-content/plugins/migrate-posts/
-bin/codecept run tools -vvv
-cd /var/www/html/wp-content/plugins/migrate-posts/
-bin/wp rewrite structure '/%postname%/'
-bin/wp option update uploads_use_yearmonth_folders 0
+#cd /var/www/html/wp-content/plugins/migrate-posts/
+#bin/codecept run tools -vvv
+#cd /var/www/html/wp-content/plugins/migrate-posts/
+#bin/wp rewrite structure '/%postname%/'
+#bin/wp option update uploads_use_yearmonth_folders 0
