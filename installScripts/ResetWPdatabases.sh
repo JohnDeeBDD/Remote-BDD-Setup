@@ -1,6 +1,9 @@
 #!/bin/sh
 #
 # source <(curl -s https://raw.githubusercontent.com/JohnDeeBDD/Remote-BDD-Setup/master/installScripts/ResetWPdatabases.sh)
+# to get public IP on AWS:
+# dig +short myip.opendns.com @resolver1.opendns.com
+# https://www.php.net/manual/en/function.yaml-parse-file.php
 
 sudo mysql -u root -ppassword << EOF
 DROP DATABASE wordpress;
