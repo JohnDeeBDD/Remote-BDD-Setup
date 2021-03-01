@@ -8,7 +8,7 @@
 sudo mysql -u root -ppassword << EOF
 DROP DATABASE wordpress;
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-grant all privileges on wordpress.* to wordpressuser@localhost identified by 'password';
+GRANT ALL PRIVILEGES ON * . * TO 'wordpressuser'@'localhost';
 FLUSH PRIVILEGES;
 EOF
 sudo rm /var/www/html/wp-config.php
