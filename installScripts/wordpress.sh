@@ -96,33 +96,19 @@ sudo git clone https://github.com/JohnDeeBDD/better-error-messages.git
 sudo git clone https://github.com/JohnDeeBDD/external-content-portfolio.git
 sudo chmod -R 777 /var/www
 cd /var/www/html/wp-content/plugins/WPbdd/tests
-sudo replace "replaceme.com" $varurl -- runner.suite.yml
-sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
-
-cd /var/www/html/wp-content/plugins/external-content-portfolio/tests
-sudo replace "replaceme.com" $varurl -- runner.suite.yml
-sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
-cd ..
-#composer install
-cd /var/www/html/wp-content/plugins/WPbdd
-#composer install
+#sudo replace "replaceme.com" $varurl -- runner.suite.yml
+sed -i "s/replaceme.com/$varurl/g" "runner.suite.yml"
+#sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
+sed -i "s/replaceme.com/$varurl/g" "acceptance.suite.yml"
 
 #setup apache conf
 sudo mv /var/www/html/wp-content/plugins/WPbdd/apacheconf.txt /etc/apache2/sites-available/000-default.conf
 cd /etc/apache2/sites-available/
-sudo replace replaceme.com $varurl -- 000-default.conf
-
-#install phantomJS
-#sudo apt-get -y install build-essential chrpath libssl-dev libxft-dev
-#sudo apt-get -y install libfreetype6 libfreetype6-dev
-#sudo apt-get -y install libfontconfig1 libfontconfig1-dev
-#to run phantomjs:
-# cd /var/www/html/wp-content/plugins/WPbdd
-# ./phantomjs --webdriver=4444
-#xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar
+#sudo replace replaceme.com $varurl -- 000-default.conf
+sed -i "s/replaceme.com/$varurl/g" "000-default.conf"
 
 #install nodeJS
-sudo apt-get -y install nodejs
+#sudo apt-get -y install nodejs
 
 #cleanup:
 sudo chmod 777 -R /var/www/html
