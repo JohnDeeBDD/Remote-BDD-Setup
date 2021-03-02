@@ -53,6 +53,10 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 
 # Install Wordpress:
 sudo chmod -R 777 /var/www
+sudo curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+sudo chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+
 cd /var/www/html
 sudo wget https://wordpress.org/latest.tar.gz
 tar xfz latest.tar.gz
@@ -97,15 +101,15 @@ sudo git clone https://github.com/JohnDeeBDD/external-content-portfolio.git
 sudo chmod -R 777 /var/www
 cd /var/www/html/wp-content/plugins/WPbdd/tests
 #sudo replace "replaceme.com" $varurl -- runner.suite.yml
-sed -i "s/replaceme.com/$varurl/g" "runner.suite.yml"
+sudo sed -i "s/replaceme.com/$varurl/g" "runner.suite.yml"
 #sudo replace "replaceme.com" $varurl -- acceptance.suite.yml
-sed -i "s/replaceme.com/$varurl/g" "acceptance.suite.yml"
+sudo sed -i "s/replaceme.com/$varurl/g" "acceptance.suite.yml"
 
 #setup apache conf
 sudo mv /var/www/html/wp-content/plugins/WPbdd/apacheconf.txt /etc/apache2/sites-available/000-default.conf
 cd /etc/apache2/sites-available/
 #sudo replace replaceme.com $varurl -- 000-default.conf
-sed -i "s/replaceme.com/$varurl/g" "000-default.conf"
+sudo sed -i "s/replaceme.com/$varurl/g" "000-default.conf"
 
 #install nodeJS
 #sudo apt-get -y install nodejs
@@ -120,10 +124,10 @@ cd /var/www/html/wp-content/plugins/WPbdd
 nohup xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar &>/dev/null &
 bin/codecept build
 bin/codecept run runner -vvv --html
-bin/wp theme install responsive-kubrick --activate
-bin/wp plugin activate FastRegister
-bin/wp widget add my_widget sidebar-1 1
-bin/wp rewrite structure '/%postname%/'
+wp theme install responsive-kubrick --activate
+wp plugin activate FastRegister
+wp widget add my_widget sidebar-1 1
+wp rewrite structure '/%postname%/'
 
 #removes password auth
 # sudo sed -i -e '/^PasswordAuthentication / s/ .*/ yes/' /etc/ssh/sshd_config
@@ -132,15 +136,7 @@ bin/wp rewrite structure '/%postname%/'
 # echo "freelancer:password" | sudo chpasswd
 # sudo usermod -aG sudo freelancer
 
-#cloud9
-#curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
-#curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-#sudo apt-get install -y nodejs
-#sudo apt-get install python-minimal
-#sudo mkdir ~/cloud9
-#sudo ln -s /var/www/html/wp-content/plugins /cloud9
 sudo service apache2 restart
-#nano ~/.ssh/authorized_keys
 
 #cloud9 symbolic link
 ln -s /var/www/html /home/ubuntu
