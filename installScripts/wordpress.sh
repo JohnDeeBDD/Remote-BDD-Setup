@@ -97,8 +97,9 @@ sudo rm hello.php
 sudo git clone https://github.com/JohnDeeBDD/WPbdd.git
 sudo git clone https://github.com/JohnDeeBDD/FastRegister.git
 sudo git clone https://github.com/JohnDeeBDD/better-error-messages.git
-sudo git clone https://github.com/JohnDeeBDD/external-content-portfolio.git
 sudo chmod -R 777 /var/www
+cd /var/www/html/wp-content/plugins/WPbdd/tests
+composer install
 cd /var/www/html/wp-content/plugins/WPbdd/tests
 #sudo replace "replaceme.com" $varurl -- runner.suite.yml
 sudo sed -i "s/replaceme.com/$varurl/g" "runner.suite.yml"
@@ -107,12 +108,6 @@ sudo sed -i "s/replaceme.com/$varurl/g" "acceptance.suite.yml"
 
 #setup apache conf
 sudo mv /var/www/html/wp-content/plugins/WPbdd/apacheconf.txt /etc/apache2/sites-available/000-default.conf
-cd /etc/apache2/sites-available/
-#sudo replace replaceme.com $varurl -- 000-default.conf
-sudo sed -i "s/replaceme.com/$varurl/g" "000-default.conf"
-
-#install nodeJS
-#sudo apt-get -y install nodejs
 
 #cleanup:
 sudo chmod 777 -R /var/www/html
