@@ -27,8 +27,8 @@ sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl
 sudo apt-get -y install php-hash php-json php-sodium php-openssl
 
 sudo apt-get install build-essential checkinstall && apt-get build-dep imagemagick -y
-sudo apt install imagemagick
-sudo apt install php-imagick
+sudo apt install -y imagemagick
+sudo apt install -y php-imagick
 
 #sudo apt-get -y install firefox
 #sudo apt-get -y install default-jdk
