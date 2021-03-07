@@ -13,6 +13,6 @@ FLUSH PRIVILEGES;
 EOF
 sudo rm /var/www/html/wp-config.php
 cd /var/www/html/wp-content/plugins/WPbdd/
-bin/codecept run acceptance ResetWPCept.php -vvv
+bin/codecept run runner SetupWordPressCept.php -vvv
 wp rewrite structure '/%postname%/'
 wp option update uploads_use_yearmonth_folders 0
