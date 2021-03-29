@@ -11,7 +11,8 @@ CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 GRANT ALL PRIVILEGES ON * . * TO 'wordpressuser'@'localhost';
 FLUSH PRIVILEGES;
 EOF
-sudo rm /var/www/html/wp-config.php
+cd /var/www/html
+sudo rm wp-config.php
 cd /var/www/html/wp-content/plugins/WPbdd/
 bin/codecept run runner SetupWordPressCept.php -vvv
 wp rewrite structure '/%postname%/'
