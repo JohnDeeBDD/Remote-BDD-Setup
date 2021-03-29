@@ -12,7 +12,7 @@ GRANT ALL PRIVILEGES ON * . * TO 'wordpressuser'@'localhost';
 FLUSH PRIVILEGES;
 EOF
 cd /var/www/html
-#sudo rm wp-config.php
+sudo rm wp-config.php
 cd /var/www/html/wp-content/plugins/WPbdd/
 bin/codecept run runner SetupWordPressCept.php -vvv
 wp rewrite structure '/%postname%/'
