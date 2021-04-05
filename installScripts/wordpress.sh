@@ -17,6 +17,7 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 sudo apt-get -y update
 sudo apt-get -y upgrade 
 sudo apt-get -y install google-chrome-stable
+sudo apt-get -y install net-tools
 #sudo apt-get -f install
 #sudo apt-get -y install nodejs-legacy
 #sudo apt-get -y install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
