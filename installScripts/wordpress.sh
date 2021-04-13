@@ -115,28 +115,4 @@ sudo mv /var/www/html/wp-content/plugins/WPbdd/apacheconf.txt /etc/apache2/sites
 sudo chmod 777 -R /var/www/html
 sudo apt-get clean
 sudo service apache2 restart
-
-#activate WordPress via the Codeception runner and CLI:
-cd /var/www/html/wp-content/plugins/WPbdd
-nohup xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar &>/dev/null &
-bin/codecept build
-bin/codecept run runner -vvv --html
-wp theme install responsive-kubrick --activate
-wp plugin activate FastRegister
-wp widget add my_widget sidebar-1 1
-wp rewrite structure '/%postname%/'
-
-cd /var/www/html
-sudo sed -i "s/( 'WP_DEBUG', false )/( 'WP_DEBUG', true )/g" "wp-config.php"
-
-#removes password auth
-# sudo sed -i -e '/^PasswordAuthentication / s/ .*/ yes/' /etc/ssh/sshd_config
-# sudo adduser freelancer --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
-# This will actually set the password:
-# echo "freelancer:password" | sudo chpasswd
-# sudo usermod -aG sudo freelancer
-
-sudo service apache2 restart
-
-#cloud9 symbolic link
-ln -s /var/www/html /home/ubuntu
+#source <(curl -s https://raw.githubusercontent.com/johndeebdd/Remote-BDD-Setup/master/installScripts/UbuntuWPFinish.sh)
