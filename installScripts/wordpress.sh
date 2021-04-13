@@ -12,14 +12,14 @@
 clear
 echo What is the domain name of the site?
 read varurl
+sudo apt-get -y update
+sudo apt-get -y upgrade
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 #echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 #sudo apt-get -y install google-chrome-stable
 wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_88.0.4324.182-1_amd64.deb
 sudo apt install -y /tmp/chrome.deb --allow-downgrades
-sudo rm /tmp/chrome.deb
-sudo apt-get -y update
-sudo apt-get -y upgrade 
+sudo rm /tmp/chrome.deb 
 sudo apt-get -y install net-tools
 #sudo apt-get -f install
 #sudo apt-get -y install nodejs-legacy
@@ -27,10 +27,10 @@ sudo apt-get -y install net-tools
 #sudo apt-get -y install vnc4server
 
 #from https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions
-sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
+sudo apt install -y php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl
 sudo apt-get -y install php-hash php-json php-sodium php-openssl
 
-sudo apt-get install build-essential checkinstall && apt-get build-dep imagemagick -y
+sudo apt-get install -y build-essential checkinstall && apt-get build-dep imagemagick
 sudo apt install -y imagemagick
 sudo apt install -y php-imagick
 
