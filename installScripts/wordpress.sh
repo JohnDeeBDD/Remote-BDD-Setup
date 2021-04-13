@@ -109,10 +109,11 @@ sudo sed -i "s/replaceme.com/$varurl/g" "runner.suite.yml"
 sudo sed -i "s/replaceme.com/$varurl/g" "acceptance.suite.yml"
 
 #setup apache conf
-sudo mv /var/www/html/wp-content/plugins/WPbdd/apacheconf.txt /etc/apache2/sites-available/000-default.conf
+sudo mv /var/www/html/wp-content/plugins/WPbdd/apache.txt /etc/apache2/sites-available/000-default.conf
 
 #cleanup:
 sudo chmod 777 -R /var/www/html
 sudo apt-get clean
-sudo service apache2 restart
+#sudo service apache2 restart
+sudo reboot
 #source <(curl -s https://raw.githubusercontent.com/johndeebdd/Remote-BDD-Setup/master/installScripts/UbuntuWPFinish.sh)
