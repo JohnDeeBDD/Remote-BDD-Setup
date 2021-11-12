@@ -5,8 +5,8 @@
 # dig +short myip.opendns.com @resolver1.opendns.com
 # https://www.php.net/manual/en/function.yaml-parse-file.php
 
-cd /var/www/html/wp-content/plugins/WPbdd
-nohup xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar &>/dev/null &
+#cd /var/www/html/wp-content/plugins/WPbdd
+#nohup xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar &>/dev/null &
 
 sudo mysql -u root -ppassword << EOF
 DROP DATABASE wordpress;
