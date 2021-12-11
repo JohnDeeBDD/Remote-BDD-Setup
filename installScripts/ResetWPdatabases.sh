@@ -21,4 +21,5 @@ wp option update uploads_use_yearmonth_folders 0
 wp user create Subcriberman subscriberman@email.com --role=subscriber --user_pass=password --display_name=Subscriberman
 wp plugin activate better-error-messages
 wp plugin activate fcfs-block
+wp plugin activate disable-administration-email-verification-prompt
 wp post delete 1 --force
