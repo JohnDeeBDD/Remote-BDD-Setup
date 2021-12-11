@@ -18,3 +18,4 @@ cd /var/www/html/wp-content/plugins/WPbdd/
 bin/codecept run runner SetupWordPressCept.php -vvv
 wp rewrite structure '/%postname%/'
 wp option update uploads_use_yearmonth_folders 0
+wp user create Subcriberman subscriberman@email.com --role=subscriber --user_pass=password --display_name=Subscriberman
