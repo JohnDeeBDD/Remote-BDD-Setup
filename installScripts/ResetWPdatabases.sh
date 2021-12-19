@@ -26,3 +26,4 @@ wp plugin activate disable-welcome-messages-and-tips
 wp post delete 1 --force
 cd /var/www/html/wp-content/plugins/WPbdd/tests/runner
 php ChangeYmlIPs.php
+cd /var/www/html/wp-content/plugins/fcfs-block
