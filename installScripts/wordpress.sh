@@ -98,6 +98,9 @@ EOF
 cd /var/www/html/wp-content/plugins
 sudo rm -fr akismet
 sudo rm hello.php
+wp plugin install disable-administration-email-verification-prompt
+wp plugin install email-log
+wp plugin install disable-welcome-messages-and-tips
 #sudo git clone https://github.com/Hitman007/CRG-Mods.git
 sudo git clone https://github.com/JohnDeeBDD/WPbdd.git
 sudo git clone https://github.com/JohnDeeBDD/FastRegister.git
