@@ -24,6 +24,7 @@ wp plugin activate fcfs-block
 wp plugin activate disable-administration-email-verification-prompt
 wp plugin activate disable-welcome-messages-and-tips
 wp plugin activate email-log
+wp plugin activate email-tunnel
 wp post delete 1 --force
 cd /var/www/html/wp-content/plugins/WPbdd/tests/runner
 php ChangeYmlIPs.php
