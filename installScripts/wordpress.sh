@@ -12,9 +12,12 @@
 clear
 echo What is the domain name of the site?
 read varurl
-sudo apt-get -y update
-sudo apt-get -y upgrade
+sudo apt -y update
+sudo apt -y upgrade
 sudo snap install node --classic
+sudo apt install -y python2-minimal
+sudo mkdir ~/cloud9
+sudo apt -y install python3-pip
 
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 #echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
@@ -50,6 +53,7 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again p
 sudo apt-get -y install lamp-server^
 sudo a2enmod rewrite
 sudo apt-get -y install php-mbstring
+
 
 #setup swap on Ubuntu:
 #sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
