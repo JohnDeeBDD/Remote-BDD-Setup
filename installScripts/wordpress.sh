@@ -3,6 +3,7 @@
 # you may have to install curl first with: sudo apt-get install curl
 # source <(curl -s https://raw.githubusercontent.com/johndeebdd/Remote-BDD-Setup/master/installScripts/wordpress.sh)
 # Directions: https://generalchicken.net/bdd-wp-aws/
+# nano ~/.ssh/authorized_keys
 
 #chromedriver
 #cd /var/www
