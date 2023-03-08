@@ -42,9 +42,9 @@ sudo apt -y install php7.4
 
 #sudo apt-get -y install php-hash php-json php-sodium php-openssl
 
-sudo apt-get install -y build-essential checkinstall && apt-get build-dep imagemagick
-sudo apt install -y imagemagick
-sudo apt install -y php-imagick
+#sudo apt-get install -y build-essential checkinstall && apt-get build-dep imagemagick
+#sudo apt install -y imagemagick
+#sudo apt install -y php-imagick
 
 #sudo apt-get -y install firefox
 #sudo apt-get -y install default-jdk
@@ -68,6 +68,10 @@ sudo apt-get -y install php-mbstring
 # Composer:
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
+#php8.2
+#sudo apt install -y php8.2-common php8.2-mysql php8.2-xml php8.2-xmlrpc php8.2-curl php8.2-gd php8.2-imagick php8.2-cli php8.2-dev php8.2-imap php8.2-mbstring php8.2-opcache php8.2-soap php8.2-zip php8.2-intl
+
+
 # Install Wordpress:
 sudo chmod -R 777 /var/www
 sudo curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
@@ -81,6 +85,10 @@ sudo mv -v /var/www/html/wordpress/* /var/www/html/
 sudo rm -fr /var/www/html/wordpress
 sudo rm /var/www/html/index.html
 sudo rm /var/www/html/latest.tar.gz
+
+wp config create --dbname=wordpress --dbuser=wordpressuser --dbpass=password
+wp core install --url=http://$varurl --title="Dev Site" --admin_user=Codeception --admin_password=password --admin_email=codeception@email.com --skip-email
+
 #setup PHP to own the WordPress directory:
 sudo chown -R ubuntu:www-data /var/www/html
 sudo find /var/www/html -type d -exec chmod g+s {} \;
