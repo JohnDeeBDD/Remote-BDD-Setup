@@ -122,12 +122,19 @@ wp plugin install disable-welcome-messages-and-tips
 sudo git clone https://github.com/JohnDeeBDD/WPbdd.git
 sudo git clone https://github.com/JohnDeeBDD/FastRegister.git
 sudo git clone https://github.com/JohnDeeBDD/better-error-messages.git
+https://github.com/JohnDeeBDD/email-tunnel.git
 sudo chmod -R 777 /var/www
 cd /var/www/html/wp-content/plugins/WPbdd
 #composer install
 #cd /var/www/html/wp-content/plugins/WPbdd/tests
 #sudo sed -i "s/replaceme.com/$varurl/g" "runner.suite.yml"
 #sudo sed -i "s/replaceme.com/$varurl/g" "acceptance.suite.yml"
+
+cd /var/www/html
+wp plugin install classic-editor
+wp plugin install classic-widgets
+wp plugin activate --all
+wp plugin activate woocommerce
 
 #setup apache conf
 sudo mv /var/www/html/wp-content/plugins/WPbdd/apache.txt /etc/apache2/sites-available/000-default.conf
