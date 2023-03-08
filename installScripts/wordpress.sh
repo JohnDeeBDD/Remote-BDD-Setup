@@ -134,7 +134,7 @@ cd /var/www/html
 wp plugin install classic-editor
 wp plugin install classic-widgets
 wp plugin activate --all
-wp plugin activate woocommerce
+#wp plugin activate woocommerce
 
 #setup apache conf
 sudo mv /var/www/html/wp-content/plugins/WPbdd/apache.txt /etc/apache2/sites-available/000-default.conf
