@@ -34,11 +34,12 @@ sudo apt-get -y install net-tools
 #sudo apt-get -y install vnc4server
 
 #from https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions
-#sudo apt install -y php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl
 #sudo apt install -y php7.2-common php7.2-mysql php7.2-xml php7.2-xmlrpc php7.2-curl php7.2-gd php7.2-imagick php7.2-cli php7.2-dev php7.2-imap php7.2-mbstring php7.2-opcache php7.2-soap php7.2-zip php7.2-intl
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 sudo apt -y install php7.4
+sudo apt install -y php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl
+
 
 #sudo apt-get -y install php-hash php-json php-sodium php-openssl
 
@@ -71,7 +72,7 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 #php8.2
 #sudo apt install -y php8.2-common php8.2-mysql php8.2-xml php8.2-xmlrpc php8.2-curl php8.2-gd php8.2-imagick php8.2-cli php8.2-dev php8.2-imap php8.2-mbstring php8.2-opcache php8.2-soap php8.2-zip php8.2-intl
 
-
+sudo service apache2 restart
 # Install Wordpress:
 sudo chmod -R 777 /var/www
 sudo curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
