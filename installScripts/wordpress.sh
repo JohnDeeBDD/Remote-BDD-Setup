@@ -128,9 +128,9 @@ sudo git clone https://github.com/JohnDeeBDD/better-error-messages.git
 sudo chmod -R 777 /var/www
 cd /var/www/html/wp-content/plugins/WPbdd
 #composer install
-cd /var/www/html/wp-content/plugins/WPbdd/tests
-sudo sed -i "s/replaceme.com/$varurl/g" "runner.suite.yml"
-sudo sed -i "s/replaceme.com/$varurl/g" "acceptance.suite.yml"
+#cd /var/www/html/wp-content/plugins/WPbdd/tests
+#sudo sed -i "s/replaceme.com/$varurl/g" "runner.suite.yml"
+#sudo sed -i "s/replaceme.com/$varurl/g" "acceptance.suite.yml"
 
 #setup apache conf
 sudo mv /var/www/html/wp-content/plugins/WPbdd/apache.txt /etc/apache2/sites-available/000-default.conf
