@@ -87,8 +87,8 @@ sudo rm -fr /var/www/html/wordpress
 sudo rm /var/www/html/index.html
 sudo rm /var/www/html/latest.tar.gz
 
-wp config create --dbname=wordpress --dbuser=wordpressuser --dbpass=password
-wp core install --url=http://$varurl --title="Dev Site" --admin_user=Codeception --admin_password=password --admin_email=codeception@email.com --skip-email
+sudo wp config create --dbname=wordpress --dbuser=wordpressuser --dbpass=password
+sudo wp core install --url=http://$varurl --title="Dev Site" --admin_user=Codeception --admin_password=password --admin_email=codeception@email.com --skip-email
 
 #setup PHP to own the WordPress directory:
 sudo chown -R ubuntu:www-data /var/www/html
