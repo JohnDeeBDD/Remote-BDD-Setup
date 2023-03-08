@@ -74,6 +74,20 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 
 sudo service apache2 restart
 # Install Wordpress:
+
+mysql -u root -ppassword << EOF
+CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'localhost';
+FLUSH PRIVILEGES;
+EOF
+
+mysql -u root -ppassword << EOF
+CREATE DATABASE wordpress_unit_test DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+GRANT ALL PRIVILEGES ON wordpress_unit_test.* TO 'wordpressuser'@'localhost';
+FLUSH PRIVILEGES;
+EOF
+
 sudo chmod -R 777 /var/www
 sudo curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 sudo chmod +x wp-cli.phar
@@ -96,24 +110,6 @@ sudo find /var/www/html -type d -exec chmod g+s {} \;
 sudo chmod g+w /var/www/html/wp-content
 sudo chmod -R g+w /var/www/html/wp-content/plugins
 sudo chmod -R g+w /var/www/html/wp-content/themes
-
-#Coddiad IDE. Access Codeiad via a browser @ {domainURL.com/codiad}
-#sudo git clone https://github.com/Codiad/Codiad /var/www/html/codiad
-#sudo touch /var/www/html/codiad/config.php
-#sudo chown www-data:www-data -R /var/www/html/codiad/
-
-mysql -u root -ppassword << EOF
-CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'localhost';
-FLUSH PRIVILEGES;
-EOF
-
-mysql -u root -ppassword << EOF
-CREATE DATABASE wordpress_unit_test DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-GRANT ALL PRIVILEGES ON wordpress_unit_test.* TO 'wordpressuser'@'localhost';
-FLUSH PRIVILEGES;
-EOF
 
 # Wordpress plugins:
 cd /var/www/html/wp-content/plugins
