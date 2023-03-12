@@ -71,7 +71,12 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 #php8.2
 #sudo apt install -y php8.2-common php8.2-mysql php8.2-xml php8.2-xmlrpc php8.2-curl php8.2-gd php8.2-imagick php8.2-cli php8.2-dev php8.2-imap php8.2-mbstring php8.2-opcache php8.2-soap php8.2-zip php8.2-intl
 
+#Apache2
+cd /etc/apache2/sites-available
+sudo rm 000-default.conf
+sudo wget https://raw.githubusercontent.com/JohnDeeBDD/Remote-BDD-Setup/master/installScripts/000-default.conf
 sudo service apache2 restart
+
 # Install Wordpress:
 
 mysql -u root -ppassword << EOF
@@ -135,12 +140,9 @@ wp plugin install classic-widgets
 wp plugin activate --all
 #wp plugin activate woocommerce
 
-#setup apache conf
-sudo mv /var/www/html/wp-content/plugins/WPbdd/apache.txt /etc/apache2/sites-available/000-default.conf
-
 #cleanup:
 sudo chmod 777 -R /var/www/html
 sudo apt-get clean
-#sudo service apache2 restart
+
 sudo reboot
 #source <(curl -s https://raw.githubusercontent.com/johndeebdd/Remote-BDD-Setup/master/installScripts/UbuntuWPFinish.sh)
