@@ -10,7 +10,6 @@
 #sudo wget -y https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
 #unzip -y chromedriver_linux64.zip
 
-clear
 echo What is the domain name of the site?
 read varurl
 sudo apt -y update
