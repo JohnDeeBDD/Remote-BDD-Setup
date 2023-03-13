@@ -136,7 +136,7 @@ cd /var/www/html/wp-content/plugins/WPbdd
 
 cd /var/www/html
 wp config set FS_METHOD direct --path=/var/www/html
-wp config set debug true --path=/var/www/html
+wp config set WP_DEBUG true --path=/var/www/html
 wp rewrite structure '/%postname%/' --path=/var/www/html
 wp plugin install classic-editor
 wp plugin install classic-widgets
