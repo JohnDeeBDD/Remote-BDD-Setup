@@ -135,10 +135,14 @@ cd /var/www/html/wp-content/plugins/WPbdd
 #sudo sed -i "s/replaceme.com/$varurl/g" "acceptance.suite.yml"
 
 cd /var/www/html
+wp config set FS_METHOD direct --path=/var/www/html
+wp config set debug true --path=/var/www/html
+wp rewrite structure '/%postname%/' --path=/var/www/html
 wp plugin install classic-editor
 wp plugin install classic-widgets
 wp plugin activate --all
 #wp plugin activate woocommerce
+wp option update uploads_use_yearmonth_folders 0 --path=/var/www/html
 
 #cleanup:
 sudo chmod 777 -R /var/www/html
