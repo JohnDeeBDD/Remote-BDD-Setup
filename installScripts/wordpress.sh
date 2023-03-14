@@ -10,6 +10,7 @@
 #sudo wget -y https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
 #unzip -y chromedriver_linux64.zip
 
+sudo apt-get install dialog apt-utils -y
 sudo apt -y update
 sudo apt -y upgrade
 sudo snap install node --classic
