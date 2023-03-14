@@ -10,8 +10,6 @@
 #sudo wget -y https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
 #unzip -y chromedriver_linux64.zip
 
-echo What is the domain name of the site?
-read varurl
 sudo apt -y update
 sudo apt -y upgrade
 sudo snap install node --classic
@@ -106,7 +104,7 @@ sudo rm /var/www/html/index.html
 sudo rm /var/www/html/latest.tar.gz
 
 sudo wp config create --dbname=wordpress --dbuser=wordpressuser --dbpass=password --allow-root
-sudo wp core install --url=http://$varurl --title="Dev Site" --admin_user=Codeception --admin_password=password --admin_email=codeception@email.com --skip-email --allow-root
+sudo wp core install --url=http://DOMAINURL --title="GENERALCHICKENSITE" --admin_user=Codeception --admin_password=password --admin_email=codeception@email.com --skip-email --allow-root
 
 #setup PHP to own the WordPress directory:
 sudo chown -R ubuntu:www-data /var/www/html
