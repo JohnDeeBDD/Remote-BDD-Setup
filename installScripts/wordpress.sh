@@ -126,9 +126,9 @@ wp plugin install disable-welcome-messages-and-tips
 sudo git clone https://github.com/JohnDeeBDD/WPbdd.git
 sudo git clone https://github.com/JohnDeeBDD/FastRegister.git
 sudo git clone https://github.com/JohnDeeBDD/better-error-messages.git
-sudo git clone https://github.com/JohnDeeBDD/email-tunnel.git
+#sudo git clone https://github.com/JohnDeeBDD/email-tunnel.git
 sudo chmod -R 777 /var/www
-cd /var/www/html/wp-content/plugins/WPbdd
+#cd /var/www/html/wp-content/plugins/WPbdd
 #composer install
 #cd /var/www/html/wp-content/plugins/WPbdd/tests
 #sudo sed -i "s/replaceme.com/$varurl/g" "runner.suite.yml"
