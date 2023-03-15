@@ -15,9 +15,10 @@ read varurl
 sudo apt -y update
 sudo apt -y upgrade
 sudo snap install node --classic
-sudo apt install -y python2-minimal
+#sudo apt install -y python2-minimal
 sudo mkdir ~/cloud9
-sudo apt -y install python3-pip
+#sudo apt -y install python3-pip
+sudo apt -y install python
 
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 #echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
