@@ -59,6 +59,8 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again p
 sudo apt-get -y install lamp-server^
 sudo a2enmod rewrite
 sudo apt-get -y install php-mbstring
+sudo apt-get -y install sendmail
+
 
 
 #setup swap on Ubuntu:
