@@ -5,55 +5,26 @@
 # Directions: https://generalchicken.net/bdd-wp-aws/
 # nano ~/.ssh/authorized_keys
 
-#chromedriver
-#cd /var/www
-#sudo wget -y https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
-#unzip -y chromedriver_linux64.zip
-
 echo What is the domain name of the site?
 read varurl
 sudo apt -y update
 sudo apt -y upgrade
 sudo snap install node --classic
-#sudo apt install -y python2-minimal
 sudo mkdir ~/cloud9
-#sudo apt -y install python3-pip
-sudo apt -y install python
+sudo apt -y install python3
 
-#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-#echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-#sudo apt-get -y install google-chrome-stable
+sudo apt -y install net-tools
 
-wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_88.0.4324.182-1_amd64.deb
-sudo apt install -y /tmp/chrome.deb --allow-downgrades
-sudo rm /tmp/chrome.deb 
-sudo apt-get -y install net-tools
-#sudo apt-get -f install
-#sudo apt-get -y install nodejs-legacy
-#sudo apt-get -y install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
-#sudo apt-get -y install vnc4server
-
-#from https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions
-#sudo apt install -y php7.2-common php7.2-mysql php7.2-xml php7.2-xmlrpc php7.2-curl php7.2-gd php7.2-imagick php7.2-cli php7.2-dev php7.2-imap php7.2-mbstring php7.2-opcache php7.2-soap php7.2-zip php7.2-intl
+# Install PHP 8.1 (current supported version)
 sudo add-apt-repository ppa:ondrej/php -y
-sudo apt-get update
-sudo apt -y install php7.4
-sudo apt install -y php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl
+sudo apt update
+sudo apt -y install php8.1
+sudo apt install -y php8.1-common php8.1-mysql php8.1-xml php8.1-xmlrpc php8.1-curl php8.1-gd php8.1-imagick php8.1-cli php8.1-dev php8.1-imap php8.1-mbstring php8.1-opcache php8.1-soap php8.1-zip php8.1-intl
 
-
-#sudo apt-get -y install php-hash php-json php-sodium php-openssl
-
-#sudo apt-get install -y build-essential checkinstall && apt-get build-dep imagemagick
-#sudo apt install -y imagemagick
-#sudo apt install -y php-imagick
-
-#sudo apt-get -y install firefox
-#sudo apt-get -y install default-jdk
-sudo apt-get -y install libxss1 libappindicator1 libindicator7
-sudo apt-get -y install openjdk-8-jre openjdk-8-jre-headless xvfb libxi6 libgconf-2-4
-#sudo apt-get -y install npm
-sudo apt-get -y install git zip unzip php-zip
-sudo apt-get -y install expect
+# Install Java 11 (LTS version)
+sudo apt -y install openjdk-11-jre openjdk-11-jre-headless
+sudo apt -y install git zip unzip php-zip
+sudo apt -y install expect
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
 sudo apt-get -y install lamp-server^
@@ -70,9 +41,6 @@ sudo apt-get -y install sendmail
 
 # Composer:
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-
-#php8.2
-#sudo apt install -y php8.2-common php8.2-mysql php8.2-xml php8.2-xmlrpc php8.2-curl php8.2-gd php8.2-imagick php8.2-cli php8.2-dev php8.2-imap php8.2-mbstring php8.2-opcache php8.2-soap php8.2-zip php8.2-intl
 
 #Apache2
 cd /etc/apache2/sites-available
